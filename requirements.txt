@@ -1,0 +1,14 @@
+fastapi
+python-dotenv
+langchain
+openai
+uvicorn
+python-dotenv
+line-bot-sdk
+apscheduler
+janome
+scikit-learn
+qdrant_client
+sentence_transformers
+prisma
+langchain_community
