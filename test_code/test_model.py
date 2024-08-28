@@ -13,6 +13,7 @@ model = AutoModel.from_pretrained(model_name)
 
 def encode_text(text: str):
     inputs = tokenizer(text, return_tensors='pt', padding=True, truncation=True)
+    print(inputs)
     with torch.no_grad():
         outputs = model(**inputs)
     embeddings = outputs.last_hidden_state.mean(dim=1)
@@ -23,8 +24,8 @@ def tokenize_text(text: str):
     print(tokens)
 
 if __name__ == "__main__":
-    text_1 = "大学の所在地は名古屋です"
-    text_2 = "大学は名護屋にあります"
+    text_1 = "安田研究室では火鍋パーティを行いますか？"
+    text_2 = "安田研究室でのイベントを教えてください"
     vec_1 = encode_text(text_1)
     vec_2 = encode_text(text_2)
 

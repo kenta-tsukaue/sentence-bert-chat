@@ -37,7 +37,6 @@ class Query(BaseModel):
 
 line_channel_access_token = os.getenv('LINE_CHANNEL_ACCESS_TOKEN')
 line_channel_secret = os.getenv('LINE_CHANNEL_SECRET')
-api_key = os.getenv("API_KEY")
 
 if not all([line_channel_access_token, line_channel_secret]):
     raise ValueError("必要な環境変数が設定されていません。")
